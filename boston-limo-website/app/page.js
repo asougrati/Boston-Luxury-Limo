@@ -68,7 +68,9 @@ export default function Home() {
       </section>
       <section className='m-20 flex flex-col justify-between max-h-full space-y-5 text-black'>
         <h2 className='text-3xl font-merriweather'>How Can We Help?</h2>
-        <p className='font-lora pb-5'>At Boston Luxury Limo, we understand the value of comfort, reliability, and personalized service. Whether you’re looking for:</p>
+        <p className='font-lora pb-5'>At Boston Luxury Limo, we prioritize comfort, reliability, and personalized service. 
+        Whether you need transportation for business, special events, or airport transfers, 
+        explore our services below to see how we can elevate your travel experience.</p>
         <div className='flex flex-row items-center justify-center font-lora w-full space-x-10 pb-5'>
           <div className=''>
             <button className='text-3xl opacity-50 hover:opacity-100' onClick={slideLeft}><FontAwesomeIcon icon={faChevronLeft} /></button>
@@ -103,12 +105,30 @@ export default function Home() {
           <button className='text-3xl opacity-50 hover:opacity-100' onClick={slideRight}><FontAwesomeIcon icon={faChevronRight} /></button>
           </div>
         </div>
-        <p className='font-lora'>Our drivers are ready to serve you with the highest level of care and professionalism. 
-        Discover more about our services and how we can make your travel experience exceptional.</p>
-        <div className='flex justify-center items-center w-full'>
-          <button className = "bg-yellow-300 rounded-full text-black py-3 px-9 font-lora text-lg font-semibold hover:bg-yellow-400 w-1/5">Services</button>
+        <div className='flex justify-center items-center w-full flex-col'>
+        <p className='font-lora p-6'>Ready to learn more about how we can meet your needs? 
+        Discover the full range of our luxury services by clicking below.</p>
+          <button className = "bg-yellow-300 rounded-full text-black py-3 px-7 font-lora text-lg font-semibold hover:bg-yellow-400 w-1/5">Explore Our Services</button>
         </div>
       </section>
+      <section className='relative flex justify-center max-h-full space-y-5 text-black flex-col'>
+        <img className='size-full'src='/images/limo-service.jpg'></img>
+        <div className='absolute bg-white w-1/2 h-auto p-10 items-center flex justify-between flex-col space-y-6'>
+          <h2 className='text-3xl font-merriweather'>Ready To Book Your Ride?</h2>
+          <p>Booking your luxury ride is easy. Whether you’re planning a trip or need a ride for a special event, we’re here to assist you. 
+            Simply click below to book online, or reach out to us directly.</p>
+          <button className = "bg-yellow-300 rounded-full text-black py-3 px-7 font-lora text-lg font-semibold hover:bg-yellow-400 w-1/4">Book Now</button>
+          <p>Have questions or need assistance?<br/> Contact us at (781) 690-2905 or email us at BosLuxLimo@gmail.com. <br/>
+            We’re available to ensure your travel experience is seamless from start to finish.</p>
+        </div>
+        
+
+      </section>
+
+
+
+
+
      <footer className="bg-black flex justify-center space-x-10 p-5 px-20 py-10">
       <p className="col-span-5 text-4xl p-2 text-yellow-400 font-vibes" href='.'>Boston Luxury Limo</p>
       <div className="flex flex-col justify-between text-xs items-center">
