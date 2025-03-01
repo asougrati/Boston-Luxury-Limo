@@ -19,7 +19,7 @@ export default function Footer() {
             <li><a href="/contact" className="hover:underline">Contact</a></li>
           </ul>
         </div>
-        <div>
+        <div className='mr-4'>
           <h2 className="font-semibold font-merriweather">Contact Us</h2>
           <p>Phone: <a href="tel:+1234567890" className="hover:underline">+1 (234) 567-890</a></p>
           <p>Email: <a href="mailto:info@bostonluxurylimo.com" className="hover:underline">info@bostonluxurylimo.com</a></p>
