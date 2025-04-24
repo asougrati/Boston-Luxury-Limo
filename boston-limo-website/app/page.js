@@ -181,7 +181,8 @@ export default function Home() {
         </div>
       </section>
       <section className='flex justify-center px-10 font-lora scroll-mt-32' ref={fleetSectionRef}>
-        <div className='m-20 w-3/4 relative'>
+        
+        {/**<div className='m-20 w-3/4 relative'>
           <img src={getImageURL("fleet")} className='relative w-full object-cover p-6'></img>
           <div className="absolute top-[30%] left-[20%] right-[20%] p-5 bg-white items-center z-10 shadow-black shadow-2xl text-black  bg-opacity-60">
             <div className="bg-white  justify-start p-5 shadow-lg text-center">
@@ -201,7 +202,7 @@ export default function Home() {
               </div>
             
           </div>
-        </div>
+        </div> */}
       </section>
       <section className='flex flex-col justify-center items-center bg-black p-20 w-full font-lora' ref={contactSectionRef}>
         <div className="flex flex-row space-x-4 w-full justify-center">
