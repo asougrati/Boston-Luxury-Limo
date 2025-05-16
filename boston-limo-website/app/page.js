@@ -1,18 +1,17 @@
 "use client"
 
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHandshake, faUserGear, faLandmark} from '@fortawesome/free-solid-svg-icons'
-import ObserverProvider from './components/ObserverProvider';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import {BookNow} from './components/BookNow'
 import {ContactForm} from './components/ContactForm'
+import { ServicesHomeDesktop, ServicesHomeMobile } from './components/ServicesHome';
 
 function getImageURL(thing) { 
   return ("/images/" + thing + ".jpg" ?? "")
@@ -45,14 +44,13 @@ export default function Home() {
   }
 
   return (
-    <ObserverProvider>
     <div className="bg-white">
       <Header 
       onScrollToSection={handleScroll} />
       <section className=" relative max-h-screen">
-          <img className=' size-full'src='/images/2020-cadillac-escalade-001-1567021710.jpg' id='img'/>
+          <img className='md:size-full'src='/images/2020-cadillac-escalade-001-1567021710.jpg' id='img'/>
           <div className="absolute inset-0 top-0 flex flex-col items-center justify-center space-y-9" >
-          <p id='scalable-text' className="lg:text-6xl md:text-4xl text-2xl text-white font-extrabold font-lora">
+          <p id='scalable-text' className="lg:text-6xl md:text-4xl text-md text-white font-extrabold font-lora">
             The Ultimate Ride Experience.
           </p>
             <p className="text-white lg:text-lg  md:text-sm text-xs text-center font-lora lg:w-1/3 md:w-1/2 w-2/3">
@@ -61,20 +59,20 @@ export default function Home() {
             <BookNow/>
           </div>
         </section>
-      <section className='flex flex-col justify-between max-h-full space-y-5 text-black p-20 items-center scroll-mt-32' ref={aboutSectionRef}>
+      <section className='flex flex-col justify-between max-h-full space-y-5 text-black md:p-20 p-10 items-center scroll-mt-32' ref={aboutSectionRef}>
         <div className='flex flex-row space-x-4 w-full justify-center'>
           <div className='bg-gray-400 h-px w-[10%] self-center'/>
-          <h2 className='text-3xl self-center'><span className='font-serif'>Why Choose </span> 
+          <h2 className='text-3xl self-center text-center'><span className='font-serif'>Why Choose </span> 
           <span className='text-yellow-400 font-vibes text-4xl'>Boston Luxury Limo</span></h2>
           <div className='bg-gray-400 h-px w-[10%] self-center'/>
         </div>
         <p className='font-lora pb-5'>At Boston Luxury Limo, we believe that luxury is more than just a ride—it’s an experience. 
             As a small, family-owned business, we take pride in offering a level of personalized service that larger companies simply can't match. 
             Here’s what sets us apart:</p>
-        <div className='flex flex-row justify-between space-x-20 font-lora w-4/5'>
+        <div className='flex flex-col md:flex-row justify-between md:space-x-20 font-lora md:w-4/5 w-full'>
           <div className='flex flex-col items-center p-5 shadow-xl space-y-3'>
             <icon className="bg-yellow-100 p-10 px-8 rounded-full mb-5"><FontAwesomeIcon icon={faUserGear} className='text-yellow-400 text-6xl'/></icon>
-            <h2 className='font-serif text-xl'>Personalized Service</h2>
+            <h2 className='font-serif text-xl text-center'>Personalized Service</h2>
             <p className='text-center'>At Boston Luxury Limo, we believe in building relationships with our clients. 
                 We are dedicated to making you feel at home, with warm, friendly service that you can rely on every time.</p>
           </div>
@@ -94,92 +92,12 @@ export default function Home() {
         <div className=''>
         </div>
       </section>
-      <section className='text-white flex flex-col bg-black space-y-20 font-lora py-20' ref={servicesSectionRef}>
-        <div className="relative h-full overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute right-0 bottom-0 h-full overflow-hidden">
-            <img
-              src={getImageURL("airplane")}
-              alt="Airplane"
-              className="h-full object-contain"
-            />
-          </div>
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black from-55% to-transparent z-10"/>
-
-          {/* Text Content */}
-          <div className="relative z-20 flex flex-col justify-between space-y-8 p-20 w-1/2 text-white">
-            <div className="flex flex-row space-x-4 w-full justify-center">
-            <div className='bg-gray-300 h-px w-1/4 self-center'/>
-              <h1 className="text-3xl font-serif">Airport Service</h1>
-              <div className='bg-gray-300 h-px w-1/4 self-center'/>
-            </div>
-            <p>
-            Boston Luxury Limo offers reliable, private airport transportation to and from Boston Logan International Airport. Whether you’re arriving or departing, our black car service ensures a smooth, stress-free experience every time. We track your flight in real time, so your chauffeur is ready when you land—early, delayed, or on schedule. Choose from curbside pickup or meet-and-greet service inside the terminal, depending on what works best for you.
-            <br/><br/>Our chauffeurs are professional, punctual, and experienced with navigating Boston Logan, even during peak traffic. Every ride is clean, comfortable, and tailored to your needs, with full luggage assistance included. Skip the hassle of parking, ride-shares, or last-minute delays. For dependable Boston airport car service, Boston Luxury Limo delivers the experience you can count on—every time.
-            </p>
-          </div>
-        </div>
-        <div className="relative h-full overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute left-0 bottom-0 h-full overflow-hidden">
-            <img
-              src={getImageURL("clarendon")}
-              alt="Airplane"
-              className="h-full object-contain -translate-x-10"
-            />
-          </div>
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-l from-black from-55% to-transparent z-10"/>
-
-          {/* Text Content */}
-          <div className="relative z-20 flex flex-col justify-between space-y-5 p-20 w-1/2 ml-auto text-white">
-            <div className="flex flex-row space-x-4 w-full justify-center">
-              <div className='bg-gray-300 h-px w-1/4 self-center'/>
-              <h1 className="text-3xl font-serif">Corporate Travel</h1>
-              <div className='bg-gray-300 h-px w-1/4 self-center'/>
-            </div>
-            <p>
-            Boston Luxury Limo specializes in providing corporate travel solutions tailored to meet the needs of busy professionals and executives. Whether you’re heading to a business meeting, conference, or corporate event, our service ensures punctuality, discretion, and a smooth, stress-free experience from start to finish.
-
-            <br/><br/>Our professional chauffeurs are polished and understand the importance of time and presentation in the business world. With real-time scheduling, flexible bookings, and a commitment to reliability, we help you make the right impression—every time.
-
-            <br/><br/>From full-day itineraries to tailored routes, Boston Luxury Limo supports your business with dependable, high-end transportation services that you can trust.
-            </p>
-          </div>
-        </div>
-        <div className="relative h-full overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute right-0 bottom-0 h-full overflow-hidden">
-            <img
-              src={getImageURL("garden")}
-              alt="Airplane"
-              className="h-full object-contain"
-            />
-          </div>
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black from-55% to-transparent z-10"/>
-
-          {/* Text Content */}
-          <div className="relative z-20 flex flex-col justify-between space-y-5 p-20 w-1/2 text-white">
-            <div className="flex flex-row space-x-4 w-full justify-center">
-              <div className='bg-gray-300 h-px w-1/4 self-center'/>
-              <h1 className="text-3xl font-serif">Special Events</h1>
-              <div className='bg-gray-300 h-px w-1/4 self-center'/>
-            </div>
-            <p>
-            Make your special occasions unforgettable with Boston Luxury Limo. Whether it’s a wedding, prom, anniversary, birthday, or a night out on the town, we provide elegant and reliable transportation that adds a touch of class to your celebration.
-
-            <br/><br/>Our professional chauffeurs handle every detail with care—from timely arrivals to seamless coordination—so you can focus on enjoying the moment. We understand how important these events are, and we’re committed to delivering a smooth, stress-free experience that matches the significance of your day.
-
-            <br/><br/>With Boston Luxury Limo, your special event begins the moment you step into the car, setting the tone for a celebration to remember.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className='block md:hidden'>
+        <ServicesHomeMobile ref={servicesSectionRef}/>
+      </div>
+      <div className='hidden md:block'>
+        <ServicesHomeDesktop ref={servicesSectionRef}/>
+      </div>
       <section className='flex justify-center px-10 font-lora scroll-mt-32' ref={fleetSectionRef}>
         
         {/**<div className='m-20 w-3/4 relative'>
@@ -204,17 +122,17 @@ export default function Home() {
           </div>
         </div> */}
       </section>
-      <section className='flex flex-col justify-center items-center bg-black p-20 w-full font-lora' ref={contactSectionRef}>
+      <section className='flex flex-col justify-center items-center bg-black md:p-20 p-10 w-full font-lora space-y-10' ref={contactSectionRef}>
         <div className="flex flex-row space-x-4 w-full justify-center">
                 <div className='bg-gray-300 h-px w-[10%] self-center'/>
-                <h1 className="text-3xl font-serif">Contact Us</h1>
+                <h1 className="text-3xl font-serif text-center">Contact Us</h1>
                 <div className='bg-gray-300 h-px w-[10%] self-center'/>
           </div>
-        <div className='flex flex-row flex-grow items-stretch space-x-10 p-10 w-full'>
-        <div className="w-1/2">
+        <div className='flex md:flex-row flex-col flex-grow items-center space-y-10 w-full'>
+        <div className="md:w-1/2 w-full">
           <ContactForm/>
         </div>
-          <div className='flex flex-col justify-center space-y-5 p-10 w-1/4'>
+          <div className='flex flex-col justify-center space-y-5 md:w-1/4 w-full'>
             <div>
               <h2>Call</h2>
                 <a href="tel:+16172669999" className='text-yellow-400'>617-266-9999</a>
@@ -236,6 +154,5 @@ export default function Home() {
       </section>
      <Footer/>
     </div>
-    </ObserverProvider>
   );
 }
