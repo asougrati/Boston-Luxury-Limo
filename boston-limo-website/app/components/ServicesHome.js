@@ -9,7 +9,7 @@ const ServicesHomeDesktop = React.forwardRef((props, ref) => {
   const {getImageURL} = props;
 
     return (
-        <div className='text-white flex flex-col bg-black space-y-20 font-lora py-20' ref={ref}>
+        <div className='text-white flex flex-col bg-black space-y-20 font-lora py-20'>
         <div className="relative h-full overflow-hidden">
           {/* Background Image */}
           <div className="absolute right-0 bottom-0 h-full overflow-hidden">
@@ -93,7 +93,7 @@ const ServicesHomeMobile = React.forwardRef((props, ref) => {
   const {getImageURL} = props;
 
   return (
-    <div ref={ref} className='text-white flex flex-col bg-red-400 font-lora'>
+    <div className='text-white flex flex-col bg-red-400 font-lora'>
       <div className='bg-white text-black font-lora py-10 '>
         <div className="flex flex-row space-x-4 w-full justify-center ">
           <div className='bg-gray-300 h-px w-1/12 self-center'/>

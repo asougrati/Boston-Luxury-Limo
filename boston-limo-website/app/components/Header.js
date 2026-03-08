@@ -18,13 +18,13 @@ export default function Header({onScrollToSection}) {
           <nav className={`flex py-5 lg:block ${isMenuOpen ? 'block' : 'hidden'}`}>
             <ul className={`flex justify-between items-center flex-col bg-white w-full absolute top-full left-0 lg:flex-row lg:bg-black text-sm font-lora font-bold text-black lg:text-white lg:items-center lg:h-full lg:static`}>
                 <li className="border-b-2 md:border-b-0">
-                  <button onClick={() => onScrollToSection("about")} className="p-4 hover:text-gray-400">About Us</button>
+                  <button onClick={() => {onScrollToSection("about"); toggleMenu();}} className="p-4 hover:text-gray-400">About Us</button>
                   </li>
                 <li className="border-b-2 lg:border-b-0">
-                  <button onClick={() => onScrollToSection("services")} className="p-4 hover:text-gray-400">Services</button>
+                  <button onClick={() => {onScrollToSection("services"); toggleMenu()}} className="p-4 hover:text-gray-400">Services</button>
                   </li>
                 <li className="lg:mb-0">
-                  <button onClick={() => onScrollToSection("contact")}className="p-4 hover:text-gray-400">Contact</button>
+                  <button onClick={() => {onScrollToSection("contact"); toggleMenu()}}className="p-4 hover:text-gray-400">Contact</button>
                   </li>
                 <li className="hidden lg:block">
                   <button onClick={() => onScrollToSection("contact")} className="bg-yellow-300 rounded-full text-black p-5 mx-5 font-lora font-semibold hover:bg-yellow-400">Book Now</button>

@@ -32,9 +32,6 @@ export default function Home() {
       case 'services':
         servicesSectionRef.current.scrollIntoView({ behavior: 'smooth' });
         break;
-      case 'fleet':
-        fleetSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-        break;
       case 'contact':
         contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
         break;
@@ -93,12 +90,14 @@ export default function Home() {
         <div className=''>
         </div>
       </section>
-      <div className='block md:hidden'>
-        <ServicesHomeMobile ref={servicesSectionRef} getImageURL={getImageURL} />
-      </div>
-      <div className='hidden md:block'>
-        <ServicesHomeDesktop ref={servicesSectionRef} getImageURL={getImageURL} />
-      </div>
+      <section ref={servicesSectionRef} className='scroll-mt-32'>
+        <div className='block md:hidden'>
+          <ServicesHomeMobile getImageURL={getImageURL} />
+        </div>
+        <div className='hidden md:block'>
+          <ServicesHomeDesktop getImageURL={getImageURL} />
+        </div>
+      </section>
       {/* <Fleet ref={fleetSectionRef} getImageURL={getImageURL}/> */}
       <section className='flex flex-col justify-center items-center bg-black md:p-20 p-10 w-full font-lora space-y-10' ref={contactSectionRef}>
         <div className="flex flex-row space-x-4 w-full justify-center">
