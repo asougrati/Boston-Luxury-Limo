@@ -113,18 +113,18 @@ export default function Home() {
           <div className='flex md:flex-row flex-col justify-start md:justify-between space-y-5 md:w-full w-1/2 md:items-end'>
             <div>
               <h2>Call</h2>
-              <a href="tel:+16172669999" className='text-yellow-400'>617-266-9999</a>
+              <a href="tel:+16172669999" className='text-yellow-400'>781-690-2905</a>
             </div>
             <div>
               <h2>Email</h2>
-              <a href="mailto:info@bostonluxurylimo.com" className='text-yellow-400'>info@bostonluxurylimo.com</a>
+              <a href="mailto:info@bostonluxurylimo.com" className='text-yellow-400'>bosluxlimo@gmail.com</a>
             </div>
             <div className='flex-col flex col-span-2 lg:col-span-1 space-y-1 '>
               <h2>Follow Us</h2>
               <ul className='flex flex-row  space-x-7 text-2xl items-center text-yellow-400'>
-                <li className='hover:text-yellow-200'><a><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a></li>
-                <li className='hover:text-yellow-200'><a><FontAwesomeIcon icon={faWhatsapp}></FontAwesomeIcon></a></li>
-                <li className='hover:text-yellow-200'><a><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a></li>
+                <li className='hover:text-yellow-200'><a href="https://www.instagram.com/bostonluxurylimo/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon></a></li>
+                <li className='hover:text-yellow-200'><a href="https://www.instagram.com/bostonluxurylimo/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp}></FontAwesomeIcon></a></li>
+                <li className='hover:text-yellow-200'><a href="https://www.instagram.com/bostonluxurylimo/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon></a></li>
               </ul>
             </div>
           </div>
