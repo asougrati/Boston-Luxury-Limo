@@ -10,7 +10,7 @@ export default function Footer() {
           <a href='/'><h1 className="text-3xl text-yellow-400 font-vibes">Boston Luxury Limo</h1></a>
         </div>
       <div className="mt-2 text-center text-sm">
-        <p>© 2025 Boston Luxury Limo | <a href="" className="hover:underline">Privacy Policy</a> | <a href="" className="hover:underline">Terms & Conditions</a></p>
+        <p>© 2025 Boston Luxury Limo</p>
       </div>
     </footer>
     )
