@@ -5,8 +5,8 @@ import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Boston Luxury Limo",
-  description: "Luxury Limo Service in Boston",
+  title: "Private Car & Chauffeured Service in Boston | Airport, Corporate & Special Events | Boston Luxury Limo",
+  description: "Reliable private car and chauffeured service in Boston for airport transportation, corporate travel, and special events. Ride in comfort with professional chauffeurs and luxury vehicles. Serving Boston, MA, and surrounding areas.",
 };
 
 export default function RootLayout({ children }) {

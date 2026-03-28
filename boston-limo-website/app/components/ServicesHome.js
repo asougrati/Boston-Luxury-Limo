@@ -1,9 +1,9 @@
 import React from 'react';
 
 const text = new Map();
-text.set("airplane", {title: "Airport Service", description: "Boston Luxury Limo provides reliable private transportation to and from Boston Logan International Airport. Our professional chauffeurs ensure a smooth, stress-free experience from pickup to drop-off.\n\nWe track your flight in real time and offer both curbside pickup and meet-and-greet service. With punctual drivers, comfortable vehicles, and full luggage assistance, your airport ride is handled with ease and professionalism."});
-text.set("clarendon", {title: "Corporate Travel", description: "Boston Luxury Limo provides professional transportation for meetings, conferences, and corporate events. Our chauffeurs are punctual, discreet, and committed to delivering a smooth, reliable experience.\n\nWith flexible scheduling and dependable service, we help busy professionals travel comfortably and arrive ready for what matters most."});
-text.set("garden", {title: "Special Events", description: "Make your celebrations unforgettable with Boston Luxury Limo. From weddings and proms to birthdays and nights out, we provide elegant, reliable transportation.\n\nOur professional chauffeurs ensure timely arrivals and seamless service, so you can relax and enjoy every moment in style."})
+text.set("airplane", {title: "Airport Service", description: "We provide reliable private car service in Boston, including transportation to and from Logan Airport. Our professional chauffeurs track your flights to ensure timely pickups and drop-offs, offering luxury private driving for business or leisure travelers."});
+text.set("clarendon", {title: "Corporate Travel", description: "Our executive and corporate car service in Boston is perfect for business travelers and company events. We provide private, punctual transportation to meetings, airport transfers, and professional chauffeur service, ensuring a comfortable and productive ride throughout Boston and surrounding areas."});
+text.set("garden", {title: "Special Events", description: "We offer luxury private driving and chauffeured service in Boston for weddings, concerts, proms, and other special events. Whether you’re heading to Fenway Park, TD Garden, or Gillette Stadium, our chauffeurs provide reliable, stylish transportation to make your event seamless and memorable."})
 
 const ServicesHomeDesktop = React.forwardRef((props, ref) => {
   const {getImageURL} = props;
